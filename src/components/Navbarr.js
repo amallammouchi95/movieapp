@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import ReactStars from 'react-stars';
 
 function Navbarr({settext, setscore}) {
@@ -19,9 +20,9 @@ function Navbarr({settext, setscore}) {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Movies</Nav.Link>
-            <Nav.Link href="#action2">Contact</Nav.Link>
-            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="#action1"> <Link to="/" style={{textDecoration:"none", color:"white"}}>Movies</Link> </Nav.Link>
+            <Nav.Link href="#action2"> <Link to="/contact" style={{textDecoration:"none", color:"white"}}>Contact</Link></Nav.Link>
+            <Nav.Link href="#action2"> <Link to="/about" style={{textDecoration:"none", color:"white"}}>About</Link></Nav.Link>
             
           </Nav>
           <ReactStars

@@ -6,6 +6,10 @@ import Navbarr from './components/Navbarr';
 
 import { useState } from 'react';
 import Movielist from './components/Movielist';
+import { Route, Routes } from 'react-router-dom';
+import About from './components/About';
+import Contact from './components/Contact';
+import Trailer from './components/Trailer';
 
 
 
@@ -124,8 +128,15 @@ function App() {
     <div className="App">
      
       <Navbarr settext={settext} setscore={setscore}/>
-      <Movielist movies={movies} setmovies={setmovies} text={text} score={score}/>
       
+      
+      <Routes>
+        <Route path="/" element={ <Movielist movies={movies} setmovies={setmovies} text={text} score={score}/> } />
+        <Route path="/about" element={ <About/> } />
+        <Route path="/contact" element={ <Contact/> } />
+        <Route path="/trailer/:name" element={ <Trailer movies={movies}/> } />
+      </Routes>
+
     </div>
   );
 }
