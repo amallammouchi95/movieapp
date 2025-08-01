@@ -1,0 +1,17 @@
+.btn-outline-success{
+  background-color: red !important;
+  border: red !important;
+  color: white !important;
+}
+
+.content{
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.add{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
